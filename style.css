@@ -1,0 +1,444 @@
+ 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: larger;
+  }
+  
+  li a:hover {
+    background-color: #111;
+    color: white;
+  }
+  .hero{
+    padding-top: 200px;
+    margin-bottom: 200px;
+    display: flex;
+    background-image:url('7af963814e0e-gettyimages-1475073978.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+ .hero button{
+    padding: 10px 20px;
+    font-size: 20px;
+    color:black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .hero button:hover{
+    background-color: black;
+    color: white;
+  }
+  .hero h1{
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  .hero p{
+    font-size: 20px;
+  }
+  @keyframes scroll {
+     0% { transform: translateX(0); } 
+     100% { transform: translateX(calc(-250px * 7)); }
+     } 
+  .slider { 
+    padding: 10px;
+    background: white; 
+    height: 500px; 
+    margin: auto; 
+    overflow: hidden;
+    position: relative; 
+    } 
+    .slider::before, .slider::after {
+     background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      height: 100px;
+       position: absolute; 
+       width: 200px; 
+    z-index: 2; 
+   } 
+   .slider::after {
+     right: 0; top: 0; transform: rotateZ(180deg); 
+    } 
+    .slider::before { left: 0; top: 0;
+    } 
+    .slide-track { 
+        animation: scroll 40s linear infinite; 
+        display: flex; 
+        width: calc(250px * 14); /* Adjust this based on the number of slides */ 
+    }
+   .slide {
+     height: 500px; 
+     width: 350px; 
+    }
+    .container {
+      margin-bottom: -200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    .image {
+      padding: 200px;
+    }
+    
+    .content {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 10px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      width: 500px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+   .card-content{
+    background-color: rgb(226, 223, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 160px;
+    margin: 20px;
+    margin-top: 200px;
+    transition: scale 2s, rotate 2s;
+    }
+    .card-content:hover{
+      transform: scale(2,3);
+      transform:rotate(2deg);
+      background-color: black;
+      color: white;
+    }
+    .card-content h1{
+      font-size: 50px;
+      font-weight: bolder;
+    }
+    .card-content p{
+      font-size: 20px;
+    }
+    .card-content .btn{
+      padding: 10px 20px;
+      font-size: 20px;
+      color:white;
+      background-color: red;
+      border-radius: 5px;
+    }
+    .card-content .btn:hover{
+      background-color: white;
+      color: red;
+    }
+    .pic{
+      width: 400px;
+      height: 400px;
+    }
+
+    @keyframes display {
+      0% {
+       transform: translateX(200px);
+       opacity: 0;
+    }
+      10% {
+       transform: translateX(0);
+       opacity: 1;
+    }
+      20% {
+       transform: translateX(0);
+       opacity: 1;
+    }
+       30% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+       100% {
+         transform: translateX(-200px);
+         opacity: 0;
+    }
+    }
+
+    .pic-ctn {
+        position: relative;
+       width: 400px;
+       height: 300px;
+       margin-bottom: 140px;
+    }
+
+.pic-ctn > img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+.contain {
+   max-width: 1200px;
+    margin:100px; 
+    padding: 20px;
+  } 
+.contain h1 { 
+  margin-left: 500px;
+  font-size: 2em;
+   margin-bottom: 10px;
+   } 
+.contain p {
+    margin-left: 390px;
+   color:black;
+   margin-bottom: 20px; 
+  } 
+  .toggle { 
+    margin-left: 500px;
+    display: inline-block; 
+    margin-bottom: 20px; 
+  } 
+  .toggle button {
+    background-color: #ff3366;
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer;  
+  } 
+  .plans { 
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 20px; 
+  } 
+  .plan { 
+    background-color: rgb(239, 234, 234); 
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    padding: 50px; 
+    width: 180px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  } 
+  .plan h2 { 
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+  } 
+  .plan .price { 
+    font-size: 2em; 
+    margin-bottom: 10px; 
+  } 
+  .plan ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    margin-bottom: 20px; 
+  } 
+  .plan ul li { 
+    margin-bottom: 10px; 
+  } 
+  .plan button { 
+    background-color: red;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    }
+    .plan button:hover { 
+      background-color: rgb(202, 101, 101); 
+    }
+    .contact-container { 
+      background-color: white; 
+      border: 1px solid #ddd; 
+      border-radius: 5px; 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+      padding: 20px; 
+      margin-left: 100px;
+      width: 1200px; 
+      text-align: center; 
+    } 
+    .contact-container h2 { 
+      font-size: 24px; 
+      margin-bottom: 10px; 
+    } 
+    .contact-container p { 
+      font-size: 20px; 
+      color: #666; 
+      margin-bottom: 20px; 
+      margin-left: 350px;
+    } 
+    .contact-container 
+    .contact-info { 
+      margin-bottom: 20px; 
+    } 
+    .contact-container 
+    .contact-info h3 { 
+      font-size: 18px; 
+      margin-bottom: 5px; 
+    }
+    .dark-mode {
+      background-color: black;
+      color:white;
+    }
+    .dark-mode button{
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .dark-mode button:hover{
+      background-color: black;
+      color: white;
+    }
+    .dark-mode h1{
+      color: white;
+    }
+    .dark-mode p{
+      color: white;
+    }
+    .dark-mode .btn{
+      background-color: red;
+      color: white;
+    }
+    .dark-mode .btn:hover{
+      background-color: white;
+      color: red;
+    }
+    .dark-mode .card-content{
+      background-color: black;
+      color: white;
+    }
+    .dark-mode .card-content .btn{
+      background-color: white;
+      color: red;
+    }
+    .dark-mode .card-content .btn:hover{
+      background-color: red;
+      color: white;
+    }
+    .dark-mode .hero button{
+      background-color: black;
+      color: white;
+    }
+    .dark-mode .hero button:hover{
+      background-color: white;
+      color: red;
+    }
+    .dark-mode .hero h1{
+      color: white;
+    }
+    .dark-mode .hero p{
+      color: white;
+    }
+    .dark-mode .slider::before, .slider::after{
+      background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    }
+    .dark-mode .plans{
+      background-color: black;
+      color: white;
+    }
+    .dark-mode .plan{
+      background-color: black;
+      color: white;
+    }
+    .dark-mode .plan button{
+      background-color: white;
+      color: red;
+    }
+    .dark-mode .plan button:hover{
+      background-color: red;
+      color: white;
+    }
+    .dark-mode .contact-container{
+      background-color: black;
+      color: white;
+    }
+    .dark-mode .contact-container h2{
+      color: white;
+    }
+
+    .dark-mode .contact-container p{
+      color: white;
+    }
+    .dark-mode .contact-container .contact-info h3{
+      color: white;
+    }
+
+    .dark-mode .contact-container .contact-info p{
+      color: white;
+    }
+    .dark-mode .contact-container .contact-info a{
+      color: white;
+    }
+    .dark-mode .contact-container .contact-info a:hover{
+      color: red;
+    }
+    .dark-mode .contact-container .contact-info button{
+      background-color: white;
+      color: red;
+    }
+    .dark-mode .contact-container .contact-info button:hover{
+      background-color: red;
+      color: white;
+    }
+    .dark-mode .contact-container .contact-info .btn{
+      background-color: red;
+      color: white;
+    }
+    .dark-mode .contact-container .contact-info .btn:hover{
+      background-color: white;
+      color: red;
+    }
+    .dark-mode .contact-container .contact-info .btn1{
+      background-color: red;
+      color: white;
+    }
+    /* Basic styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px; /* Adjust as needed */
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position:sticky;
+  display: inline;
+  top: 10px; /* Adjust this for the amount of "stickiness" */
+}
